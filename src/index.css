@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --green: #2D6A4F;
+  --green-dark: #1B4D38;
+  --green-light: #E8F5EE;
+
+  --terracotta: #C4663A;
+  --terracotta-light: #FDEEE6;
+
+  --cream: #FAF7F2;
+  --warm-white: #FFFEF9;
+
+  --gold: #C9A227;
+  --gold-light: #FDF7E3;
+
+  --charcoal: #1C1C1E;
+  --muted: #6B5B4E;
+  --muted-subtle: #9B8B80;
+
+  --border: #E5DDD5;
+  --card: #FFFFFF;
+
+  --body-bg: #E8E0D8;
+
+  /* Aliases for convenience */
+  --color-primary: var(--green);
+  --color-primary-dark: var(--green-dark);
+  --color-accent: var(--terracotta);
+  --color-accent-light: var(--terracotta-light);
+  --color-gold: var(--gold);
+  --color-canvas: var(--cream);
+  --color-card: var(--card);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-subtle: var(--muted-subtle);
+  --color-border: var(--border);
+}
+
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+
+  --color-green: #2D6A4F;
+  --color-green-dark: #1B4D38;
+  --color-green-light: #E8F5EE;
+
+  --color-terracotta: #C4663A;
+  --color-terracotta-light: #FDEEE6;
+
+  --color-cream: #FAF7F2;
+  --color-warm-white: #FFFEF9;
+
+  --color-gold: #C9A227;
+  --color-gold-light: #FDF7E3;
+
+  --color-charcoal: #1C1C1E;
+  --color-muted: #6B5B4E;
+  --color-muted-subtle: #9B8B80;
+
+  --color-border: #E5DDD5;
+  --color-card: #FFFFFF;
+
+  --color-body-bg: #E8E0D8;
+
+  --color-primary: #2D6A4F;
+  --color-primary-dark: #1B4D38;
+  --color-accent: #C4663A;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--charcoal);
+}
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.screen-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.woven-bg {
+  background-color: var(--cream);
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 18px,
+      rgba(45, 106, 79, 0.04) 18px,
+      rgba(45, 106, 79, 0.04) 19px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 18px,
+      rgba(45, 106, 79, 0.04) 18px,
+      rgba(45, 106, 79, 0.04) 19px);
+}
+
+.shadow-card {
+  box-shadow: 0 2px 12px rgba(44, 30, 20, 0.08);
+}
+
+.mic-pulse {
+  animation: micpulse 1.4s ease-in-out infinite;
+}
+
+@keyframes micpulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 0 16px rgba(45, 106, 79, 0);
+  }
+}
+
+.spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadein 0.35s ease;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideup 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.trust-bar {
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
